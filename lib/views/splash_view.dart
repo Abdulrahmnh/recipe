@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:recipe/core/viewModel/auth_view_model.dart';
 import 'package:recipe/views/utils/AppColor.dart';
-
 import 'widget/custom_text.dart';
 
-class SplashView extends StatelessWidget {
+class SplashView extends GetWidget<AuthViewModel> {
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -47,24 +49,27 @@ class SplashView extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width,
-                        height: 60,
-                        child: OutlinedButton(
-                          child: Text('Log in',
-                              style: TextStyle(
-                                  color: AppColor.secondary,
-                                  fontSize: 28,
-                                  fontWeight: FontWeight.w600,
-                                  fontFamily: 'inter')),
-                          onPressed: () {},
-                          style: OutlinedButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10)),
-                            side: BorderSide(
-                                color: AppColor.secondary.withOpacity(0.5),
-                                width: 1),
-                            primary: Colors.white,
+                      Form(
+                        key: _formKey,
+                        child: SizedBox(
+                          width: MediaQuery.of(context).size.width,
+                          height: 60,
+                          child: OutlinedButton(
+                            child: Text('Log in',
+                                style: TextStyle(
+                                    color: AppColor.secondary,
+                                    fontSize: 28,
+                                    fontWeight: FontWeight.w600,
+                                    fontFamily: 'inter')),
+                            onPressed: () {},
+                            style: OutlinedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10)),
+                              side: BorderSide(
+                                  color: AppColor.secondary.withOpacity(0.5),
+                                  width: 1),
+                              primary: Colors.white,
+                            ),
                           ),
                         ),
                       ),
@@ -90,7 +95,9 @@ class SplashView extends StatelessWidget {
                                         fontSize: 16,
                                         fontWeight: FontWeight.w600,
                                         fontFamily: 'inter')),
-                                onPressed: () {},
+                                onPressed: () {
+                                  controller.googleSignInMethod();
+                                },
                                 style: ElevatedButton.styleFrom(
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(10)),
@@ -105,7 +112,9 @@ class SplashView extends StatelessWidget {
                                         fontSize: 16,
                                         fontWeight: FontWeight.w600,
                                         fontFamily: 'inter')),
-                                onPressed: () {},
+                                onPressed: () {
+                                  controller.facebookSignInMethod();
+                                },
                                 style: ElevatedButton.styleFrom(
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(10)),
