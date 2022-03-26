@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:recipe/core/viewModel/auth_view_model.dart';
+import 'package:recipe/model/register_view.dart';
 import 'package:recipe/views/utils/AppColor.dart';
+import '../model/login_view.dart';
 import 'widget/custom_text.dart';
 
 class SplashView extends GetWidget<AuthViewModel> {
@@ -61,7 +63,17 @@ class SplashView extends GetWidget<AuthViewModel> {
                                     fontSize: 28,
                                     fontWeight: FontWeight.w600,
                                     fontFamily: 'inter')),
-                            onPressed: () {},
+                            onPressed: () {
+                              showModalBottomSheet(
+                                  context: context,
+                                  backgroundColor: Colors.white,
+                                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20))),
+                              isScrollControlled: true,
+                              builder: (context) {
+                              return LoginView();
+                              }
+                              );
+                            },
                             style: OutlinedButton.styleFrom(
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10)),
@@ -141,7 +153,17 @@ class SplashView extends GetWidget<AuthViewModel> {
                                 'Register',
                                 textAlign: TextAlign.center,
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                showModalBottomSheet(
+                                    context: context,
+                                    backgroundColor: Colors.white,
+                                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20))),
+                                    isScrollControlled: true,
+                                    builder: (context) {
+                                      return RegisterView();
+                                    }
+                                );
+                              },
                             ),
                           ],
                         ),
