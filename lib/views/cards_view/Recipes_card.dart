@@ -128,7 +128,7 @@ class RecipesCard extends GetView<HomeController> {
               );
             },
             separatorBuilder: (context, int index) => const SizedBox(
-              width: 20,
+              width: 12,
             ),
           ),
         ));

@@ -33,9 +33,6 @@ class Recipe {
     this.directions,
     this.ingredients,
     required this.isPersonal,
-    required this.createdAt,
-    required this.updatedAt,
-    required this.v,
   });
 
   String id;
@@ -45,9 +42,6 @@ class Recipe {
   dynamic directions;
   dynamic ingredients;
   String isPersonal;
-  DateTime createdAt;
-  DateTime updatedAt;
-  int v;
 
   factory Recipe.fromJson(Map<String, dynamic> json) => Recipe(
     id: json["_id"],
@@ -57,9 +51,6 @@ class Recipe {
     directions: List<String>.from(json["directions"].map((x) => x)),
     ingredients: List<Ingredient>.from(json["ingredients"].map((x) => Ingredient.fromJson(x))),
     isPersonal: json["isPersonal"],
-    createdAt: DateTime.parse(json["createdAt"]),
-    updatedAt: DateTime.parse(json["updatedAt"]),
-    v: json["__v"],
   );
 
   Map<String, dynamic> toJson() => {
@@ -70,9 +61,6 @@ class Recipe {
     "directions": List<String>.from(directions.map((x) => x)),
     "ingredients": List<String>.from(ingredients.map((x) => x.toJson())),
     "isPersonal": isPersonal,
-    "createdAt": createdAt.toIso8601String(),
-    "updatedAt": updatedAt.toIso8601String(),
-    "__v": v,
   };
 }
 

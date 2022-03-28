@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../core/viewModel/auth_view_model.dart';
-import '../views/widget/custom_button.dart';
-import '../views/widget/custom_text.dart';
-import '../views/widget/custom_text_form_field.dart';
+import '../../../core/viewModel/auth_view_model.dart';
+import '../widget/custom_button.dart';
+import '../widget/custom_text.dart';
+import '../widget/custom_text_form_field.dart';
 
 class RegisterView extends GetWidget<AuthViewModel> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
