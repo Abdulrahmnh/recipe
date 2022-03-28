@@ -1,13 +1,12 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
-import 'package:get/get_state_manager/src/simple/get_view.dart';
-import 'package:recipe/views/screens/home_view.dart';
 import 'package:recipe/views/screens/splash_view.dart';
 
 import '../core/viewModel/auth_view_model.dart';
+import '../core/viewModel/control_view_model.dart';
+import '../views/cards_view/buttonNaviBar.dart';
+import '../views/utils/AppColor.dart';
 
 class ControlView extends GetWidget<AuthViewModel> {
   @override
@@ -15,7 +14,13 @@ class ControlView extends GetWidget<AuthViewModel> {
     return Obx(() {
       return (Get.find<AuthViewModel>().user == null)
           ? SplashView()
-          : HomeView();
+          : GetBuilder<ControlViewModel>(
+              builder: (controller) => Scaffold(
+                body: controller.currentScreen,
+                bottomNavigationBar: ButtonNaviBar(),
+              ),
+            );
     });
   }
 }
+
