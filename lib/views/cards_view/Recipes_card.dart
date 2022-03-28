@@ -10,7 +10,7 @@ class RecipesCard extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        height: 500,
+        height: 320,
         child: controller.obx(
           (data) => ListView.separated(
             shrinkWrap: true,
@@ -22,7 +22,7 @@ class RecipesCard extends GetView<HomeController> {
                 child: SizedBox(
                   width: MediaQuery.of(context).size.width * .4,
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Container(
                         width: 180,
