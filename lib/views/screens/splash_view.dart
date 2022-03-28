@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:recipe/core/viewModel/auth_view_model.dart';
-import 'package:recipe/model/register_view.dart';
+import 'package:recipe/views/screens/register_view.dart';
 import 'package:recipe/views/utils/AppColor.dart';
-import '../model/login_view.dart';
-import 'widget/custom_text.dart';
+import 'login_view.dart';
+import '../widget/custom_text.dart';
 
 class SplashView extends GetWidget<AuthViewModel> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
