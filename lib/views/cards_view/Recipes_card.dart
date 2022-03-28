@@ -34,7 +34,7 @@ class RecipesCard extends GetView<HomeController> {
                           color: Colors.grey,
                           borderRadius: BorderRadius.circular(10),
                           image: const DecorationImage(
-                            image: AssetImage('assets/featured2.jpg'),
+                            image: AssetImage('assets/images/featured2.jpg'),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -83,7 +83,7 @@ class RecipesCard extends GetView<HomeController> {
                                     child: Row(
                                       children: [
                                         SvgPicture.asset(
-                                          'assets/fire-filled.svg',
+                                          'assets/icons/fire-filled.svg',
                                           color: Colors.white,
                                           width: 12,
                                           height: 12,

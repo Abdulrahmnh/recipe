@@ -65,7 +65,7 @@ class ProfilePage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(100),
                       // Profile Picture
                       image: const DecorationImage(
-                          image: AssetImage('assets/user.jpg'),
+                          image: AssetImage('assets/images/user.jpg'),
                           fit: BoxFit.cover),
                     ),
                   ),

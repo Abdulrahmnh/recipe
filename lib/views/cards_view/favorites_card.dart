@@ -35,7 +35,7 @@ class FavoriteCard extends GetWidget<HomeController> {
                           borderRadius: BorderRadius.circular(5),
                           color: Colors.blueGrey,
                           image: const DecorationImage(
-                              image: AssetImage('assets/list2.jpg'),
+                              image: AssetImage('assets/images/list2.jpg'),
                               fit: BoxFit.cover),
                         ),
                       ),
@@ -62,7 +62,7 @@ class FavoriteCard extends GetWidget<HomeController> {
                               Row(
                                 children: [
                                   SvgPicture.asset(
-                                    'assets/fire-filled.svg',
+                                    'assets/icons/fire-filled.svg',
                                     color: Colors.black,
                                     width: 12,
                                     height: 12,
