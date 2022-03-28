@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:recipe/views/cards_view/favorites_card.dart';
 import 'package:recipe/views/screens/profile_page.dart';
@@ -10,7 +9,6 @@ import '../../controller/home_controller.dart';
 import '../cards_view/Recipes_card.dart';
 
 class HomeView extends GetView<HomeController> {
-  // FirebaseAuth _auth = FirebaseAuth.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -24,17 +22,6 @@ class HomeView extends GetView<HomeController> {
           Get.to(()=> const ProfilePage());
         },
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: <BottomNavigationBarItem>[
-             BottomNavigationBarItem(
-            icon: SvgPicture.asset('assets/icons/home.svg',
-                color: Colors.grey[600]),
-            label: ''),
-             BottomNavigationBarItem(
-            icon: SvgPicture.asset('assets/icons/discover.svg',
-                color: Colors.grey[600], height: 28, width: 26),
-            label: ''),
-    ]),
       body: ListView(
         shrinkWrap: true,
         physics: const BouncingScrollPhysics(),
@@ -42,7 +29,7 @@ class HomeView extends GetView<HomeController> {
           SingleChildScrollView(
             scrollDirection: Axis.vertical,
             child: Container(
-              height: 420,
+              height: 320,
               color: Colors.white,
               child: Stack(
                 children: [
@@ -76,7 +63,7 @@ class HomeView extends GetView<HomeController> {
                       ),
                     ],
                   ),
-                  const RecipesCard()
+                  const RecipesCard(),
                 ],
               ),
             ),
@@ -92,7 +79,7 @@ class HomeView extends GetView<HomeController> {
                   style: TextStyle(
                       fontSize: 16, fontWeight: FontWeight.w600),
                 ),
-                FavoriteCard()
+                FavoriteCard(),
               ],
             ),
           )
