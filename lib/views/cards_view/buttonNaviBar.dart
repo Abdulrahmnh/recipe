@@ -15,9 +15,9 @@ class ButtonNaviBar extends StatelessWidget {
         padding: const EdgeInsets.only(left: 60, right: 60, bottom: 20),
         color: Colors.transparent,
         child: ClipRRect(
-          borderRadius: BorderRadius.circular(5000),
+          borderRadius: BorderRadius.circular(1000),
           child: SizedBox(
-            height: 100,
+            height: 90,
             child: BottomNavigationBar(
               showSelectedLabels: false,
               showUnselectedLabels: false,
