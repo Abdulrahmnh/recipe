@@ -76,7 +76,7 @@ class HomeView extends GetView<HomeController> {
                 Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Text(
-                    'Favorite recipe',
+                    'Favorite recipes',
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
                   ),
                 ),

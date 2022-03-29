@@ -110,9 +110,10 @@ class SplashView extends GetWidget<AuthViewModel> {
                                 child: Text('Sign in with Google',
                                     style: TextStyle(
                                         color: AppColor.secondary,
-                                        fontSize: 16,
+                                        fontSize: 15,
                                         fontWeight: FontWeight.w600,
-                                        fontFamily: 'inter')),
+                                        )
+                                ),
                                 onPressed: () {
                                   controller.googleSignInMethod();
                                 },
@@ -122,14 +123,14 @@ class SplashView extends GetWidget<AuthViewModel> {
                                   primary: AppColor.primarySoft,
                                 ),
                               ),
-                              const SizedBox(height: 30),
                               ElevatedButton(
                                 child: Text('Sign in with Facebook',
                                     style: TextStyle(
                                         color: AppColor.secondary,
-                                        fontSize: 16,
+                                        fontSize: 15,
                                         fontWeight: FontWeight.w600,
-                                        fontFamily: 'inter')),
+                                        )
+                                ),
                                 onPressed: () {
                                   controller.facebookSignInMethod();
                                 },

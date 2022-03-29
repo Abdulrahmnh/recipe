@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:recipe/controller/controller_view.dart';
-import 'package:recipe/views/screens/splash_view.dart';
 
 class SplashTimer extends StatefulWidget {
   const SplashTimer({Key? key}) : super(key: key);
@@ -25,7 +24,7 @@ class _SplashTimerState extends State<SplashTimer> {
   }
 
   void navigationToNextPage() async {
-    Get.to(() => ControlView(), arguments: (Route<dynamic> route) => false);
+    Get.to(() => ControlView());
   }
 
   @override

@@ -12,7 +12,7 @@ class ButtonNaviBar extends StatelessWidget {
     return GetBuilder<ControlViewModel>(
       init: ControlViewModel(),
       builder: (controller) => Container(
-        padding: const EdgeInsets.only(left: 60, right: 60, bottom: 20),
+        padding: const EdgeInsets.only(left: 60, right: 60, bottom: 50),
         color: Colors.transparent,
         child: ClipRRect(
           borderRadius: BorderRadius.circular(1000),
