@@ -6,8 +6,8 @@ import '../core/viewModel/control_view_model.dart';
 class Binding extends Bindings {
   @override
   void dependencies(){
-    Get.lazyPut(() => AuthViewModel());
-    Get.lazyPut(() => HomeController());
-    Get.lazyPut(() => ControlViewModel());
+    Get.put((AuthViewModel()));
+    Get.put((HomeController()));
+    Get.put((ControlViewModel()));
   }
 }

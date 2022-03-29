@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:recipe/views/screens/profile_page.dart';
-
 import '../../views/screens/home_view.dart';
 
 class ControlViewModel extends GetxController {

@@ -9,7 +9,6 @@ import '../../controller/home_controller.dart';
 import '../cards_view/Recipes_card.dart';
 
 class HomeView extends GetView<HomeController> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +18,7 @@ class HomeView extends GetView<HomeController> {
         showProfilePhoto: true,
         profilePhoto: const AssetImage('assets/images/user.jpg'),
         profilePhotoOnPressed: () {
-          Get.to(()=> const ProfilePage());
+          Get.to(() => ProfilePage());
         },
       ),
       body: ListView(
@@ -74,10 +73,12 @@ class HomeView extends GetView<HomeController> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
-                Text(
-                  'Favorite recipe',
-                  style: TextStyle(
-                      fontSize: 16, fontWeight: FontWeight.w600),
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text(
+                    'Favorite recipe',
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                  ),
                 ),
                 FavoriteCard(),
               ],

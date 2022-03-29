@@ -1,11 +1,14 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:recipe/views/utils/AppColor.dart';
 import 'package:recipe/views/cards_view/user_info_tile.dart';
+import '../../controller/controller_view.dart';
 
 class ProfilePage extends StatelessWidget {
-  const ProfilePage({Key? key}) : super(key: key);
+  FirebaseAuth _auth = FirebaseAuth.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -16,17 +19,14 @@ class ProfilePage extends StatelessWidget {
         centerTitle: true,
         title: const Text('My Profile',
             style: TextStyle(fontWeight: FontWeight.w400, fontSize: 16)),
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-        ),
         actions: [
           TextButton(
-            onPressed: () {},
+            onPressed: (){
+              _auth.signOut();
+              Get.to(()=> ControlView());
+            },
             child: const Text(
-              'Edit',
+              'LOG OUT',
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 14,
@@ -96,14 +96,14 @@ class ProfilePage extends StatelessWidget {
                 UserInfoTile(
                   margin: const EdgeInsets.only(bottom: 16),
                   label: 'Email',
-                  value: 'MVP@gmail.com',
+                  value: 'AbdulrahmanAlhatti@gmail.com',
                   valueBackground: AppColor.secondary,
                   padding: const EdgeInsets.only(left: 20),
                 ),
                 UserInfoTile(
                   margin: const EdgeInsets.only(bottom: 16),
-                  label: 'MVP APPS',
-                  value: 'MVP APPS ABU DHABI',
+                  label: 'Your Name',
+                  value: 'Abdulrahman Mohammed Alhatti',
                   valueBackground: AppColor.secondary,
                   padding: const EdgeInsets.only(left: 20),
                 ),
@@ -117,7 +117,7 @@ class ProfilePage extends StatelessWidget {
                 UserInfoTile(
                   margin: const EdgeInsets.only(bottom: 16),
                   label: 'Subscription Time',
-                  value: 'Until 28 Mar 2022',
+                  value: 'Until 28 Mar 2023',
                   valueBackground: AppColor.secondary,
                   padding: const EdgeInsets.only(left: 20),
                 ),

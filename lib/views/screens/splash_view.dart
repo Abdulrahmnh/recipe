@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:recipe/core/viewModel/auth_view_model.dart';
 import 'package:recipe/views/screens/register_view.dart';
 import 'package:recipe/views/utils/AppColor.dart';
@@ -20,7 +21,8 @@ class SplashView extends GetWidget<AuthViewModel> {
             height: MediaQuery.of(context).size.height,
             decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/splash.jpg'), fit: BoxFit.cover)),
+                    image: AssetImage('assets/images/splash.jpg'),
+                    fit: BoxFit.cover)),
           ),
           Positioned(
             bottom: 0,
@@ -35,16 +37,18 @@ class SplashView extends GetWidget<AuthViewModel> {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
-                    children: const [
+                    children: [
                       Padding(
-                        padding: EdgeInsets.only(bottom: 16),
-                        child: Text('Recipe App',
-                            style: TextStyle(
-                                fontFamily: 'inter',
-                                fontWeight: FontWeight.w700,
-                                fontSize: 32,
-                                color: Colors.white)),
-                      ),
+                          padding: const EdgeInsets.only(bottom: 16),
+                          child: Text(
+                            'Welcome',
+                            style: GoogleFonts.balsamiqSans(
+                              textStyle: const TextStyle(
+                                fontSize: 45,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ))
                     ],
                   ),
                   Column(
@@ -67,12 +71,14 @@ class SplashView extends GetWidget<AuthViewModel> {
                               showModalBottomSheet(
                                   context: context,
                                   backgroundColor: Colors.white,
-                                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20))),
-                              isScrollControlled: true,
-                              builder: (context) {
-                              return LoginView();
-                              }
-                              );
+                                  shape: const RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.only(
+                                          topLeft: Radius.circular(20),
+                                          topRight: Radius.circular(20))),
+                                  isScrollControlled: true,
+                                  builder: (context) {
+                                    return LoginView();
+                                  });
                             },
                             style: OutlinedButton.styleFrom(
                               shape: RoundedRectangleBorder(
@@ -157,12 +163,14 @@ class SplashView extends GetWidget<AuthViewModel> {
                                 showModalBottomSheet(
                                     context: context,
                                     backgroundColor: Colors.white,
-                                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20))),
+                                    shape: const RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.only(
+                                            topLeft: Radius.circular(20),
+                                            topRight: Radius.circular(20))),
                                     isScrollControlled: true,
                                     builder: (context) {
                                       return RegisterView();
-                                    }
-                                );
+                                    });
                               },
                             ),
                           ],

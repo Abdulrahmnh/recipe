@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:recipe/helper/binding.dart';
+import 'package:recipe/views/splash_timer.dart';
 import 'controller/controller_view.dart';
 
 void main() async{
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       initialBinding: Binding(),
       debugShowCheckedModeBanner: false,
       title: 'Recipe App',
-      home:  ControlView(),
+        home:  const SplashTimer(),
     );
   }
 }
