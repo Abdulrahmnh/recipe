@@ -8,8 +8,8 @@ import 'package:recipe/views/cards_view/user_info_tile.dart';
 import '../../controller/controller_view.dart';
 
 class ProfilePage extends StatelessWidget {
-  FirebaseAuth _auth = FirebaseAuth.instance;
 
+  FirebaseAuth _auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
