@@ -1,8 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.recipe">
-
     <uses-permission android:name="android.permission.INTERNET"/>
-
     <application
         android:label="recipe"
         android:name="${applicationName}"
@@ -48,6 +46,6 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
-
     </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>

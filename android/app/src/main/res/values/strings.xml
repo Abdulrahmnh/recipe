@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Recipe</string>
-    <string name="facebook_app_id">1234</string>
-    <string name="fb_login_protocol_scheme">fb1234</string>
-    <string name="facebook_client_token">56789</string>
-
-
+Face    <string name="facebook_app_id">390071756207152</string>
+    <string name="fb_login_protocol_scheme">fb390071756207152</string>
+    <string name="facebook_client_token">5e4176612ab2f35b36be3435530d2b92</string>
 </resources>
